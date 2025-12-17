@@ -1,0 +1,102 @@
+:root {
+    --bg-color: #1e1e2e;
+    --calc-bg: #2d2d3f;
+    --display-bg: #181825;
+    --text-primary: #cdd6f4;
+    --text-secondary: #a6adc8;
+    --accent: #f9e2af; /* Yellowish accent */
+    --operator-bg: #45475a;
+    --equal-bg: #a6e3a1; /* Green */
+    --btn-hover: #585b70;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculator {
+    background-color: var(--calc-bg);
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    width: 350px;
+}
+
+.display-screen {
+    background-color: var(--display-bg);
+    padding: 30px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.previous-operand {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    min-height: 1.5rem;
+}
+
+.current-operand {
+    color: var(--text-primary);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px; /* Gap for grid lines */
+    background-color: var(--bg-color); /* Lines color */
+}
+
+button {
+    height: 80px;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    background-color: var(--calc-bg);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--btn-hover);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.operator-btn {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.action-btn {
+    color: #f38ba8; /* Red for delete/AC */
+}
+
+.equal-btn {
+    background-color: var(--equal-bg);
+    color: #1e1e2e;
+    font-weight: bold;
+}
+
+.equal-btn:hover {
+    background-color: #94e2d5;
+}
